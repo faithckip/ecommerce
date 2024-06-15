@@ -5,7 +5,7 @@
 {% block content %}
 <div class="grid grid-cols-5 gap-6">
     <div class="col-span-3">
-        <img src="{{item.images.url}}" class="rounded-xl">
+        <img src="{{item.media.url}}" class="rounded-xl">
     </div>
 
     <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
@@ -41,7 +41,7 @@
         <div>
             <a href="{% url 'item:detail' item.id %}">
                 <div>
-                    <img src="{{ media.item_images.url }}" class="rounded-t-xl">
+                    <img src="{{ item.media.url }}" class="rounded-t-xl">
 
                 </div>
                 <div class="p-6 bg-white rounded-b-xl">

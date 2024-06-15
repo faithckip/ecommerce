@@ -5,7 +5,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Item
 from .forms import NewItemForm, EditItemForm
 
-
 # Create your views here.
 
 def items(request):
