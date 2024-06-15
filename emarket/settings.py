@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6%#l^kjljt0*f7dn&$k-0@#4_1v51+rjl575w=ot9*d6v3l49@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOGIN_URL='/login/'
 LOGIN_REDIRECT_URL ='/'
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'emarket.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,7 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+#STATICFILES_DIRS = [BASE_DIR / "static", '/emarket/static/',]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = (BASE_DIR/ 'media')
 
