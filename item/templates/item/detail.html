@@ -7,7 +7,7 @@
     {% load static %}
     <div class="col-span-3">
        
-        <img src="{{item.media.url}}" class="rounded-xl">
+        <img src="/media/{{ item.image }}" class="rounded-xl">
     </div>
 
     <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
@@ -43,7 +43,7 @@
         <div>
             <a href="{% url 'item:detail' item.id %}">
                 <div>
-                    <img src="{{ item.media.url }}" class="rounded-t-xl">
+                    <img src="/media/{{ item.image }}" class="rounded-t-xl">
 
                 </div>
                 <div class="p-6 bg-white rounded-b-xl">

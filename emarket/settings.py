@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6%#l^kjljt0*f7dn&$k-0@#4_1v51+rjl575w=ot9*d6v3l49@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 
 #STATICFILES_DIRS = [BASE_DIR / "static", '/emarket/static/',]
 MEDIA_URL = 'media/'
-MEDIA_ROOT = (BASE_DIR/ 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
